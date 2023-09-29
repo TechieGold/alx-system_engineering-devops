@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Author: Fortunatus A. Wulnye
 # Indefinitely write text to tmpfile (default '/tmp/my_process')
 
 sleep() {
