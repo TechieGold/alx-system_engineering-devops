@@ -1,0 +1,37 @@
+1. A server is a computer or software system that provides services, 
+    resources, or functionality to other computers or devices over a network. Servers can be 
+    physical machines or virtual instances that run software designed to handle specific tasks or functions.
+
+2. The role of a domain name is to provide a human-readable and memorable way to access resources on       the internet. Domain names are used to translate easily remembered names (e.g., www.example.com) into IP addresses, which are the numerical addresses used by computers to locate one another on the internet.
+
+3. The "www" in a domain name like "www.foobar.com" is not a DNS record itself.
+    It's a subdomain that typically refers to the World Wide Web. The DNS records
+    associated with a domain name like "www.foobar.com" would usually include an A record (for IPv4) 
+    or AAAA record (for IPv6) that points to the IP address of the web server that hosts the website.
+
+4. The role of the web server is to handle HTTP requests from clients (usually web browsers)
+    and respond with the requested web pages, files, or data. Web servers process 
+    and serve web content, allowing users to access websites and web applications through their browsers.
+
+ 5. The role of the application server is to manage and process application-specific tasks,
+    such as handling business logic, data processing, and communication with databases. 
+    Application servers provide dynamic content and services to clients, often in response
+    to user interactions with a website or application.
+
+6. The role of the database is to store, manage, and retrieve structured data. 
+    Databases are used to store information like user accounts, product details,
+    and more. Application servers interact with databases to read and write data,
+    making it accessible to users through the web server.
+
+7. To communicate with the computer of a user requesting a website, the server typically
+   uses the HTTP (Hypertext Transfer Protocol) over the internet. The user's browser sends an HTTP request to the web server, which processes the request, retrieves the requested resources, and sends an HTTP response back to the user's browser.
+
+   ## Issues with the described infrastructure
+   - Single Point of Failure (SPOF): A SPOF is a component that, if it fails, will cause the entire        system to become unavailable. In the described infrastructure, the web server, application server, or database could be a SPOF. Redundancy and failover mechanisms should be in place to mitigate this risk.
+
+   - Downtime during maintenance: If the web server needs to be restarted for maintenance or deploying new code, it can result in downtime. To minimize this, a load balancer and multiple web servers can be used to ensure high availability and rolling updates to minimize disruptions.
+
+   - Scalability challenges: If incoming traffic exceeds the capacity of the infrastructure, the system cannot scale effectively. To address this, the infrastructure should be designed to handle increased load through load balancing, horizontal scaling (adding more servers), and possibly the use of content delivery networks (CDNs) to distribute content closer to users.
+
+   ### Summary
+   Addressing these issues often involves a combination of redundancy, load balancing, automation, and monitoring to ensure high availability and scalability in web hosting infrastructure.
