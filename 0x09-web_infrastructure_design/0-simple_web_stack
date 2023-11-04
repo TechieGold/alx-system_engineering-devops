@@ -42,7 +42,8 @@
 
    -    Scalability challenges: If incoming traffic exceeds the capacity of the infrastructure,
         the system cannot scale effectively. To address this, the infrastructure should be 
-        designed to handle increased load through load balancing, horizontal scaling (adding more servers), and possibly the use of content delivery networks (CDNs) to distribute content closer to users.
+        designed to handle increased load through load balancing, horizontal scaling (adding more servers), 
+        and possibly the use of content delivery networks (CDNs) to distribute content closer to users.
 
    ### Summary
     Addressing these issues often involves a combination of redundancy, load balancing, 
