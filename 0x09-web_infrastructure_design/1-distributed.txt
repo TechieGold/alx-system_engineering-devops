@@ -1,0 +1,55 @@
+1. Why Each Component:
+    - Web Server (Nginx): Serves as the front-end to handle web requests and
+      distribute them to the application server.
+    - Application Server: Runs the application code and processes requests from the web server.
+    - Load-Balancer (HAProxy): Distributes incoming traffic to multiple application servers
+      for load balancing, improving performance, and availability.
+    - Database (MySQL): Stores data used by the application and operates in a
+      Primary-Replica cluster for redundancy.
+
+2. Load-Balancer Distribution Algorithm:
+    - HAProxy is configured with a round-robin distribution algorithm.
+     This means it evenly distributes incoming requests to each application server in a circular order. 
+     It works well when all servers have similar capabilities and is simple to set up.
+
+3. Active-Passive Setup vs. Active-Active Setup:
+    - Active-Passive setup has one active component (e.g., the primary database server),
+      while the others remain passive and serve as backups. In case of failure, the passive component
+      takes over. In contrast, Active-Active setup involves multiple components actively handling requests
+      concurrently. In this infrastructure, the database cluster is set up in 
+      an Active-Passive configuration to ensure data consistency and minimize the risk of conflicts.
+
+4. Database Primary-Replica Cluster:
+    - In a Primary-Replica (Master-Slave) cluster, the primary node (Master) is responsible
+     for handling write operations (e.g., inserts, updates) and replicating data changes
+     to replica nodes (Slaves). Replica nodes are read-only and can handle read queries, 
+     providing redundancy and scalability. This setup improves fault tolerance and read performance.
+     
+5. Difference between Primary and Replica:
+    - The primary node handles write operations and is the authoritative source for data changes.
+      The replica nodes replicate data from the primary and serve read queries.
+      In the context of the application, read operations can be distributed to replica nodes,
+      reducing the load on the primary node and improving performance.
+
+## Potential Issues:
+
+1. Single Point of Failure (SPOF):
+    The primary database server can be a single point of failure in the database cluster.
+    If it fails, the system might become unavailable. Implementing failover mechanisms or
+    introducing additional redundancy is essential to mitigate this risk.
+
+2. Security Issues:
+    - Lack of firewall: Not having a firewall can expose the infrastructure to security threats.
+     Implementing a firewall to control incoming and outgoing traffic is crucial.
+    - No HTTPS: Running the infrastructure without HTTPS can lead to data transmission vulnerabilities.
+     Implementing SSL/TLS encryption for web traffic is essential for data security.
+
+3. No Monitoring:
+    Lack of monitoring makes it difficult to detect and respond to issues promptly. 
+    Implementing monitoring tools and practices to track system health, performance,
+    and security is vital for infrastructure stability.
+
+# Summary
+To improve this infrastructure, consider implementing high availability and disaster recovery 
+strategies,enhancing security measures, and setting up comprehensive monitoring and alerting 
+systems to address the identified issues and ensure a more robust and reliable environment.
