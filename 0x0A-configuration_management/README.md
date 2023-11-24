@@ -23,12 +23,12 @@ puppet apply 1-install_a_package.pp
 
 ### Execute a Command (Kill a Process)
 
-For the task of killing a process named "killmenow," the exec resource is employed in the [2-kill_a_process.pp](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0A-configuration_management/2-execute_a_command.pp) manifest. This resource uses the pkill command to terminate the specified process. Ensure proper permissions and execution by running Puppet as needed .
+For the task of killing a process named "killmenow," the exec resource is employed in the [2-execute_a_command.pp](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0A-configuration_management/2-execute_a_command.pp) manifest. This resource uses the pkill command to terminate the specified process. Ensure proper permissions and execution by running Puppet as needed .
 
 Apply the manifest with
 
 ```bash
-puppet apply 2-kill_a_process.pp
+puppet apply 2-execute_a_command.pp
 ```
 ## Additional Notes:
 
