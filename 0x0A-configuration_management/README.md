@@ -5,7 +5,7 @@ In this project, I've been learning Puppet, a configuration management tool. I p
 ## Tasks 📃
 
 ### 1. Create a File
-The Puppet manifest file [0-create_a_file.pp]() is designed to create a file named "school" in the `/tmp` directory. The file is configured with specific permissions (0744), ownership (www-data), group (www-data), and contains the content "I love Puppet."
+The Puppet manifest file [0-create_a_file.pp](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0A-configuration_management/0-create_a_file.pp) is designed to create a file named "school" in the `/tmp` directory. The file is configured with specific permissions (0744), ownership (www-data), group (www-data), and contains the content "I love Puppet."
 
 To apply the manifest, use the following command:
 ```bash
@@ -13,7 +13,7 @@ To apply the manifest, use the following command:
 ```
 
 ### 2. Install a Package (Flask)
-The [1-install_a_package.pp]() manifest is crafted to install Flask version 2.1.0 using the pip3 provider. However, if encountering issues with the provider, alternative methods like installing the puppetlabs-python module or using system package managers (apt, yum) are suggested.
+The [1-install_a_package.pp](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0A-configuration_management/1-install_a_package.pp) manifest is crafted to install Flask version 2.1.0 using the pip3 provider. However, if encountering issues with the provider, alternative methods like installing the puppetlabs-python module or using system package managers (apt, yum) are suggested.
 
 To apply the manifest, execute:
 
@@ -23,7 +23,7 @@ puppet apply 1-install_a_package.pp
 
 ### Execute a Command (Kill a Process)
 
-For the task of killing a process named "killmenow," the exec resource is employed in the [2-kill_a_process.pp]() manifest. This resource uses the pkill command to terminate the specified process. Ensure proper permissions and execution by running Puppet as needed .
+For the task of killing a process named "killmenow," the exec resource is employed in the [2-kill_a_process.pp](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0A-configuration_management/2-execute_a_command.pp) manifest. This resource uses the pkill command to terminate the specified process. Ensure proper permissions and execution by running Puppet as needed .
 
 Apply the manifest with
 
