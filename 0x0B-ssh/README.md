@@ -25,3 +25,6 @@ Requirements:
 ### 2. Client configuration file
 
 - [2-ssh_config](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0B-ssh/2-ssh_config): SSH configuration file that is set up to use the private key `~/.ssh/school` for authentication. Additionally, the configuration is tuned to reject authentication attempts using passwords.
+
+### 4. Client configuration file (w/ Puppet)
+- [100-puppet_ssh_config.pp](https://github.com/TechieGold/alx-system_engineering-devops/blob/master/0x0B-ssh/100-puppet_ssh_config.pp): This Puppet manifest configures the SSH client on a system by managing the /etc/ssh/ssh_config file. It ensures that password authentication is disabled and sets the identity file to ~/.ssh/school.
