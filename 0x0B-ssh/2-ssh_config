@@ -1,0 +1,6 @@
+# configure local SSH client to use the private key ~/.ssh/school and refuse password authentication
+Host *
+  PasswordAuthentication no
+
+Host 52.87.216.72
+  IdentityFile ~/.ssh/school
