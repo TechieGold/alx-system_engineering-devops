@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Returns to-do list information for a given employee ID."""
+"""This script returns to-do list information for a given employee ID."""
 import requests
 import sys
 
@@ -10,9 +10,8 @@ if __name__ == "__main__":
     user = requests.get("{}users/{}".format(url, user_id)).json()
     todos = requests.get("{}todos".format(url), params={
                          "userId": user_id}).json()
-
     completed = [t["title"] for t in todos if t["completed"]]
 
-    print("Employee {} is done with tasks ({}/{}):".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         user["name"], len(completed), len(todos)))
     [print("\t{}".format(c)) for c in completed]
