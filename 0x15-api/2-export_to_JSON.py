@@ -4,9 +4,9 @@
 This script exports todo-list information for a given employee Id
 into a JSON file.
 """
+import json
 import requests
 import sys
-import json
 
 if __name__ == '__main__':
     api_url = "https://jsonplaceholder.typicode.com/"
