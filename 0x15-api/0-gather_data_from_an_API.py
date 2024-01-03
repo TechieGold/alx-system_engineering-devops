@@ -12,6 +12,6 @@ if __name__ == "__main__":
                          "userId": user_id}).json()
     completed = [t["title"] for t in todos if t["completed"]]
 
-    print("Employee {} is done with tasks({}/{})".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         user["name"], len(completed), len(todos)))
     [print("\t {}".format(c)) for c in completed]
