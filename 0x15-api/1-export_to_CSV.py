@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
 """
-This script exports todo-list information for a given employee id
+This script exports todo-list information for a given employee Id
 into a csv file
 """
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == '__main__':
     api_url = "https://jsonplaceholder.typicode.com/"
