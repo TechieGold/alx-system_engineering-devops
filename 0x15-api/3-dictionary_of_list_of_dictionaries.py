@@ -2,8 +2,8 @@
 """
 This script exports todo-list information of all employee into a JSON file
 """
-import requests
 import json
+import requests
 
 if __name__ == '__main__':
     api_url = "https://jsonplaceholder.typicode.com/"
