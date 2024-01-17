@@ -23,4 +23,4 @@ def top_ten(subreddit):
             t = d.get("title")
             print(t)
     else:
-        print("None")
+        print(None)
