@@ -4,6 +4,7 @@ import requests
 
 
 def number_of_subscribers(subreddit):
+    """ Function that returns the number of subscribers from reddit api"""
     url = 'http://www.reddit.com/r/{}/about.json'
     header = {'User-Agent': 'custom'}
 
