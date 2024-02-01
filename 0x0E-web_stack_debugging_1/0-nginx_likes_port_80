@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Bash script that configures nginx to be running and listening on port 80.
+
+sudo apt-get update
+sudo apt-get install -y net-tools
+
+if ! netstat -tulpn | grep :80; then
+	sudo sed -i 's/listen 80;/listen 80 default_server;/g' /etc/nginx/nginx.conf
+	
+	sudo service nginx restart
+
+	echo 'Nginx now configured to listen on port 80'
+
+else
+	echo 'Nginx listens on port 80 already'
+
+fi 
